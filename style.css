@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    height: 100vh;
+    min-width: 35%;
+    border: 10px solid rgb(222, 173, 232);
+    border-radius: 7%;
+    display: grid;
+    grid-template-rows: 1.5fr repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "output output output output"
+    "reset reset del del" 
+    "plus minus multipl divide"
+    "one two three left-bracket"
+    "four five six right-bracket"
+    "seven eight nine equal"
+    "zer zer point equal";
+    background-color: rgb(192, 154, 228);
+    padding: 1rem 1.5rem;
+   
+}
+
+input {
+    border-radius: 3%;
+    background-color: rgb(235, 215, 241);
+}
+
+input[type=button] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+input[type=button]:active {
+    background-color: rgb(247, 179, 251);
+    border: 2px solid rgb(158, 91, 174) !important;
+}
+
+input[value]:active {
+    text-shadow: 2px 0px 1px rgb(51, 10, 66);
+}
+
+.output-form {
+    grid-area: output;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#output-form {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 4rem;
+    padding: 10px;
+    text-align: right;
+}
+
+.reset-btn {
+    grid-area: reset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#reset-btn {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.remove-btn {
+    grid-area: del;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#remove-btn  {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+
+.plus {
+    grid-area: plus;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#plus {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.minus {
+    grid-area: minus;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#minus {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.multiply {
+    grid-area: multipl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#multiply {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.divide {
+    grid-area: divide;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#divide {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-1 {
+    grid-area: one;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-1 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-2 {
+    grid-area: two;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-2 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-3 {
+    grid-area: three;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-3 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-4 {
+    grid-area: four;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-4 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-5 {
+    grid-area: five;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-5 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-6 {
+    grid-area: six;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-6 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-7 {
+    grid-area: seven;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-7 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-8 {
+    grid-area: eight;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-8 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-9 {
+    grid-area: nine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-9 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn-0 {
+    grid-area: zer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#btn-0 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+
+.l-brckt {
+    grid-area: left-bracket;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#l-brckt {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.r-brckt {
+    grid-area: right-bracket;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#r-brckt {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.point {
+    grid-area: point;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#point {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.equal {
+    grid-area: equal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#equal {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+
+@media screen and (min-width: 1400px), screen and (orientation: landscape){
+    .container {
+        max-width: 30%;
+        height: 100%;   
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .container {
+        min-width: 40%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        min-width: 50%; 
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        min-width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        min-width: 70%; 
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        min-width: 100%;
+    }
+}
+
